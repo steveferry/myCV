@@ -5,6 +5,7 @@
 	<% @cvs.each do |cv|%>
 		<tr>
 			<td><%= cv.content %></td>
+			<td><%= link_to 'Edit', edit_cv_path(cv)%></td>
 		</tr>
 	<% end %>
 </table>
