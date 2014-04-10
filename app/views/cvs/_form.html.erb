@@ -1,5 +1,8 @@
 <%= form_for @cv do |f|%>
-	<%= render 'schoolform', :f=>f%>
+	<%= render 'schoolform', :f=>f %>
+	<br />
+	<%= render 'workform', :f=>f %>
+	<br />
 	<%= f.submit %>
 
 <% end %>

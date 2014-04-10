@@ -9,7 +9,6 @@
 		<% i+=1%>
 		<br />
 	<%end%>
-	<%= f.text_field :content ,:name=>'content[school['+i.to_s+']][date]', :value=>""%>
-	<%= f.text_field :content ,:name=>'content[school['+i.to_s+']][name]',:value=>""%>
-	<br />
 <%end%>
+<%= f.text_field :content ,:name=>'content[school['+i.to_s+']][date]', :value=>""%>
+<%= f.text_field :content ,:name=>'content[school['+i.to_s+']][name]',:value=>""%>

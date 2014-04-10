@@ -6,6 +6,8 @@
 		<%= f.text_field :work, :name=>'content[[work['+i.to_s+']][date]', :value=>c[1]['date']%>
 		<%= f.text_field :work, :name=>'content[work['+i.to_s+']][name]',:value=>c[1]['name']%>
 		<% i+=1 %>
+		<br />
 	<%end%>
-	<br />
 <%end%>
+<%= f.text_field :content ,:name=>'content[work['+i.to_s+']][date]', :value=>"" %>
+<%= f.text_field :content ,:name=>'content[work['+i.to_s+']][name]',:value=>"" %>

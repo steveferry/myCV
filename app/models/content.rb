@@ -1,6 +1,6 @@
 class Content
   include ActiveModel::Serialization
-  attr_accessor :school, :twitter_handle
+  attr_accessor :school, :work
   
   def initialize(attributes = {})
     @school = attributes[:school]
