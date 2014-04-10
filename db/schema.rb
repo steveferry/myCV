@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228150824) do
+ActiveRecord::Schema.define(version: 20140410075127) do
 
   create_table "cvs", force: true do |t|
-    t.text     "content"
+    t.text     "json_content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "userId",       default: 0
   end
 
   create_table "users", force: true do |t|

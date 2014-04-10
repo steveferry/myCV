@@ -1,7 +1,5 @@
 <%= form_for @cv do |f|%>
-
-	Content: <%= f.text_area :content%>
-	
+	<%= render 'schoolform', :f=>f%>
 	<%= f.submit %>
 
 <% end %>
