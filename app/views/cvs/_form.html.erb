@@ -1,8 +1,11 @@
 <%= form_for @cv do |f|%>
+	<%= f.hidden_field :cont , :value=>"content" %>
+	<p>
 	<%= render 'schoolform', :f=>f %>
-	<br />
+	</p>
+	<p>
 	<%= render 'workform', :f=>f %>
-	<br />
+	</p>
 	<%= f.submit %>
 
 <% end %>

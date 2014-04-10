@@ -14,7 +14,7 @@ class CvsController < ApplicationController
   def update
     @cv = Cv.find(params[:id])
     @test = getContent
-    @cv.json_content = Content.new({:school=>[@test['school']],:work=>@test['work']})
+    @cv.json_content = Content.new({:school=>[@test['school']],:work=>[@test['work']]})
     if @cv.update(getParams)
       redirect_to @cv
     else

@@ -1,13 +1,34 @@
-<h1>Profession</h1>
 <% i=0 %>
+<script type="text/javascript">
+	var id = 0;
+	var init = false;
+	function addInputWork(frm, lastId) {	
+		if(!init)
+		{
+			id = lastId;
+			init = true;
+		}
+		id+=1;
+		var row = '<p id="work'+id+'"><input type="text" name="content[work['+id+']][date]" size="4" value=""> <input type="text" name="content[work['+id+']][name]" value=""> <a href="#" onClick="delInputWork('+id+');">remove</a></p>';
+		jQuery('#addFieldWork').append(row);
+	}
+	
+	function delInputWork(id){
+		jQuery('#work'+id+'').remove();
+	}
+</script>
+<h1>Profession</h1>
 <% @cv.content.work.each do |w|%>
 	
 	<% w.each do |c|%>
-		<%= f.text_field :work, :name=>'content[[work['+i.to_s+']][date]', :value=>c[1]['date']%>
-		<%= f.text_field :work, :name=>'content[work['+i.to_s+']][name]',:value=>c[1]['name']%>
+		<p id="work<%= i%>">
+			<%= f.text_field :work, :name=>'content[[work['+i.to_s+']][date]', :value=>c[1]['date']%>
+			<%= f.text_field :work, :name=>'content[work['+i.to_s+']][name]',:value=>c[1]['name']%>
+			<a href="#" onClick="delInputWork(<%= i%>);">remove</a>
+		</p>
 		<% i+=1 %>
-		<br />
 	<%end%>
 <%end%>
-<%= f.text_field :content ,:name=>'content[work['+i.to_s+']][date]', :value=>"" %>
-<%= f.text_field :content ,:name=>'content[work['+i.to_s+']][name]',:value=>"" %>
+<div id='addFieldWork'>
+</div>
+<input onClick="addInputWork(this.form, <%= i %>);" type="button" value="Ajouter une ligne" />
