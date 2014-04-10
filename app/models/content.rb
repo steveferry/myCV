@@ -5,6 +5,8 @@ class Content
   def initialize(attributes = {})
     @school = attributes[:school]
     @work = attributes[:work]
+    @school ||=[]
+    @work ||=[]
   end
 
   def persisted?
