@@ -1,19 +1,19 @@
 <h4>Ecoles</h4>
-<%= @cv.content.school.each do |cv|%>
-	<%= cv.each do |content|%>
+<% @cv.content.school.each do |cv|%>
+	<% cv.each do |content|%>
 		<p>
 		<%= content[1]["date"]%>
-		<%= content[1]["date"]%>
+		<%= content[1]["name"]%>
 		</p>
 	<%end%>
 <%end%>
 
-<h4>Ecoles</h4>
-<%= @cv.content.work.each do |cv|%>
-	<%= cv.each do |content|%>
+<h4>Profession</h4>
+<% @cv.content.work.each do |cv|%>
+	<% cv.each do |content|%>
 		<p>
 		<%= content[1]["date"]%>
-		<%= content[1]["date"]%>
+		<%= content[1]["name"]%>
 		</p>
 	<%end%>
 <%end%>
