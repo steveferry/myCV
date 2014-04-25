@@ -11,4 +11,9 @@ Détails
 * Ajouter des champs dans ces deux catégories
 * Le contenu d'un CV est sauvé en JSON dans la base de donnée
 
+Etat
+====
+* Pas de lien entre les utilisateurs et les CVs (donc pas d'informations personnelles sur les CV)
+* Manque des liens pour la création et affichage d'un CV
+
 Documentation supplémentaire: https://github.com/steveferry/myCV/tree/master/doc
