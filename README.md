@@ -13,7 +13,11 @@ Détails
 
 Etat
 ====
+* Modification d'un CV
+* Liste de tous les CV (index)
+* Pas de gestion des utilisateurs
 * Pas de lien entre les utilisateurs et les CVs (donc pas d'informations personnelles sur les CV)
 * Manque des liens pour la création et affichage d'un CV
+* Bug à cause de la gem Devise qui gère les utilisateurs
 
 Documentation supplémentaire: https://github.com/steveferry/myCV/tree/master/doc
