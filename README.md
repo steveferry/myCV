@@ -3,7 +3,7 @@ myCV
 
 Site de création et personnalisation de CV
 
-Détails
+But du site
 ====
 
 * Possibilité de créer un CV
